@@ -1,0 +1,69 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    height:100vh;
+    width: 100%;
+    background-color: skyblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-holder{
+    height: 500px;
+    width: 400px;
+    background-color: white;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    
+    
+   
+
+}
+
+.pic-container{
+    height:200px;
+    width: 100%;
+    /* background-color: blue; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pic-holder{
+    height: 150px;
+    width: 150px;
+    background-color: white;
+    border-radius: 100px;
+
+& img{
+    height: 150px;
+    width: 150px;
+    border-radius: 100px;
+}
+}
+
+.profile-details{
+    height: 250px;
+    width: 90%;
+    /* background-color: darkgoldenrod; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 800;
+    padding: 20px;
+
+& span{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 800;
+    text-decoration: underline;
+}
+}
+
+

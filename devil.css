@@ -1,0 +1,28 @@
+*{
+    box-sizing: content-box;
+}
+
+body{
+    padding: 20px;
+    display:grid;
+}
+
+/* .container{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 60px 60px 60px;
+    gap:10px;
+    
+
+}
+
+.item{
+    background-color: blue;
+    border-radius: 10px;
+} */
+
+.vacuum{
+    display:grid;
+    grid-template-areas: repeat(10, 1fr);
+    gap:10px;
+}

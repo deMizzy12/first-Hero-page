@@ -1,0 +1,469 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    width: 100%;
+    background-color: rgb(247, 248, 248);
+    display: grid;
+    grid-template-columns: 1fr;  
+    align-content: start;         
+    justify-items: center; 
+}
+
+header {
+    height: 100px;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-holder {
+    height: 80px;
+    width: auto;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+img {
+    height: 30px;
+    width: 30px;
+}
+
+.brand-details {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.brand-details h1 {
+    font-size: 20px;
+    color: rgb(13, 177, 241);
+}
+
+.brand-details h1 span {
+    color: black;
+}
+
+.brand-details p {
+    font-size: 13px;
+    color: rgb(13, 177, 241);
+}
+
+.nav-menu {
+    height: 80px;
+    width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.nav-menu a{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 18px;
+    color: grey;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.action-btns {
+    height: 80px;
+    width: 450px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.install-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 15px;
+    border-radius: 10px;
+    border: 1px solid rgb(25, 100, 129);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(43, 184, 240);
+    font-size: 18px;
+    background-color: rgb(247, 248, 248);
+    cursor: pointer;
+}
+
+.language-switch {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    border: 1px solid rgb(205, 209, 211);
+    border-radius: 15px;
+    padding: 3px 5px;
+    background-color: rgb(205, 209, 211);
+    color: rgb(105, 104, 104);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.active {
+    border: 0px;
+    border-radius: 10px;
+    background-color: white;
+    padding: 2px 6px;
+    color: black;
+}
+
+.login-link {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 18px;
+    color: grey;
+    text-decoration: none;
+}
+
+.pick-up {
+    padding: 6px 30px;
+    border-radius: 12px;
+    color: white;
+    background-color: rgb(13, 177, 241);
+    font-size: 18px;
+    border: 0;
+    cursor: pointer;
+}
+
+/* =================================================== */
+/* HIGHLIGHT 1: HAMBURGER STYLING (Hidden on Desktop)  */
+/* =================================================== */
+.hamburger-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 26px;
+    color: #334155;
+    cursor: pointer;
+    padding: 4px;
+}
+/* =================================================== */
+
+/* =========================================
+   RESPONSIVE RULES (Put at the very bottom)
+   ========================================= */
+
+@media (max-width: 1024px) {
+    header {
+        height: auto;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 15px;
+        padding: 15px 0;
+    }
+
+    .nav-menu {
+        order: 3;
+        width: 100%;
+        height: auto;
+        justify-content: center;
+        gap: 20px;
+        border-top: 1px solid #e2eef8;
+        padding-top: 12px;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        height: 72px;
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 16px;
+    }
+
+    /* Compact mobile logo */
+    .logo-holder {
+        height: auto;
+        gap: 8px;
+    }
+
+    .brand-details p {
+        display: none; /* Hides "CLEANER CLOTHES, BETTER LIVING" */
+    }
+
+    .brand-details h1 {
+        font-size: 14px;
+        max-width: 95px;
+        line-height: 1.15;
+    }
+
+    /* Reset fixed 450px width so right controls fit cleanly on phones */
+    .action-btns {
+        width: auto;
+        height: auto;
+        gap: 12px;
+    }
+
+    /* Hide desktop links and extra buttons */
+    .nav-menu,
+    .install-btn,
+    .login-link,
+    .pick-up {
+        display: none;
+    }
+
+    /* =================================================== */
+    /* HIGHLIGHT 2: HAMBURGER STYLING (Shown on Mobile)    */
+    /* =================================================== */
+    .hamburger-btn {
+        display: block;
+    }
+    /* =================================================== */
+}
+
+.hero {
+  width: 100%;
+  background: linear-gradient(135deg, #f0f9ff 0%, #ffffff 100%);
+  padding: 50px 5%;
+}
+
+.hero-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 50px;
+}
+
+/* Location Pill Badge  */
+.location {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #ffffff;
+  border: 1px solid #bae6fd;
+  color: #0284c7;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+
+/* Makes the location pin icon small and blue */
+.location-icon{
+  width: 15px;
+  height: 15px;
+  filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(176deg) brightness(95%) contrast(95%);
+}
+
+/* Turns the vertical bullet list into a horizontal inline list */
+.location-list{
+  list-style: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Adds the "•" dot between Tolu and Ajeromi-Ifelodun */
+.location-list li + li::before {
+  content: "•";
+  margin-right: 8px;
+  color: #0284c7;
+}
+
+/* Main Hero Headline */
+.hero-text h1 {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 54px;
+  font-weight: 800;
+  line-height: 1.1;
+  color: #0f172a;
+  margin-bottom: 18px;
+}
+
+/* Blue "no stress." with yellow bottom border */
+.hero-text h1 .highlight {
+  color: rgb(13, 177, 241);
+  border-bottom: 4px solid #facc15;
+}
+
+/* Subheadline Paragraph */
+ .hero-sub {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 18px;
+  color: #475569;
+  line-height: 1.6;
+  margin-bottom: 28px;
+  max-width: 480px;
+} 
+
+/* Hero Action Buttons */
+.hero-buttons {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 30px;
+}
+
+.btn-primary {
+  display: inline-flex;     /* Lines "Book a pickup" and the arrow icon up side-by-side */
+  align-items: center;      /* Centers the arrow vertically with the text */
+  gap: 8px;                 /* Adds clean space between text and arrow */
+  background-color: rgb(13, 177, 241);
+  color: #ffffff;
+  text-decoration: none;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 14px 24px;
+  border-radius: 12px;
+}
+
+.btn-primary img {
+  width: 18px;
+  height: 18px;
+  filter: brightness(0) invert(1); /* Turns a black SVG arrow pure white to match the button text */
+}
+
+.btn-secondary {
+  background-color: #ffffff;
+  color: #0f172a;
+  text-decoration: none;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 14px 24px;
+  border-radius: 12px;
+  border: 1px solid #cbd5e1;
+}
+
+/* Bottom 3 Trust Perks with SVGs */
+.hero-perks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.perk-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 14px;
+  color: #475569;
+  font-weight: 500;
+}
+
+.perk-item img {
+  width: 16px;
+  height: 16px;
+}
+
+/* =========================================
+   RIGHT HERO COLUMN (Image + Floating Cards)
+   ========================================= */
+.hero-visual {
+  position: relative; /* Anchor fence so floating cards stay attached to this photo */
+}
+
+.main-hero-img {
+  width: 100%;
+  height: 410px;
+  object-fit: cover; /* Crops cleanly without stretching the washing machines */
+  border-radius: 24px;
+  box-shadow: 0 20px 35px rgba(14, 165, 233, 0.15);
+  display: block;
+}
+
+/* Shared Styling for Both White Floating Cards */
+.float-card {
+  position: absolute;
+  background-color: #ffffff;
+  padding: 12px 16px;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.float-card strong {
+  display: block;
+  font-size: 14px;
+  color: #0f172a;
+}
+
+.float-card span {
+  font-size: 12px;
+  color: #64748b;
+}
+
+/* Circular Icon Badges inside Floating Cards */
+.float-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+}
+
+.float-icon img {
+  width: 18px;
+  height: 18px;
+}
+
+.float-icon.green {
+  background-color: #dcfce7;
+}
+
+.float-icon.blue {
+  background-color: #e0f2fe;
+}
+
+/* Top-Left Card Position */
+.card-top {
+  top: 22px;
+  left: -24px;
+}
+
+/* Bottom-Right Card Position */
+.card-right {
+  bottom: 45px;
+  right: -16px;
+}
+
+/* Bottom Dark Pill ("Washed & ironed") */
+.float-pill {
+  position: absolute;
+  bottom: 18px;
+  left: 24px;
+  background-color: rgba(15, 23, 42, 0.85);
+  color: #ffffff;
+  padding: 10px 16px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 13px;
+}
+
+.pill-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.15);
+  display: grid;
+  place-items: center;
+}
+
+.pill-icon img {
+  width: 18px;
+  height: 18px;
+}
+
+.stars {
+  color: #facc15;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+

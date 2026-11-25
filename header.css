@@ -1,0 +1,46 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    height: 100vh;
+    width: 100%;
+    background-color: brown;
+    
+}
+
+header{
+    height: 100px;
+    width: 100%;
+    background-color: green;
+    display: flex;
+    justify-content: center;
+}
+
+.headerHolder{
+    height: 100%;
+    width: 90%;
+    background-color: aquamarine;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    height: 80%;
+    width: 180px;
+    background-color: yellow;
+}
+
+nav{
+    width: 600px;
+    height: 100%;
+    background-color: red;
+}
+
+.button{
+    height: 100%;
+    width: 370px;
+    background-color: peru;
+}
